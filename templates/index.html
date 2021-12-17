@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <style>
+        .nametitle {
+            color: Black;
+            font-size: 300%;
+        }
+        .block
+        {
+            width: 480px;
+            background-color: antiquewhite;
+            border: solid 3px gray;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+<div class="nametitle"> Wellcome to the Movie Actor Search system </div>
+<div style="color: Black;font-size: 200%;"> You can choose Movie search or Actor search to see the details of the movies and actors </div>
+<div style="color: Black;font-size: 200%;"> Or you can choose the compare option to see the filmography that two stars worked together </div>
+
+<form action="/movie_search/" method = "POST">
+    <p><input type = "submit" value = "Movie" /></p>
+</form>
+
+<form action="/actor_search/" method = "POST">
+    <p><input type = "submit" value = "Actors/Actress" /></p>
+</form>
+
+<form action="/compare/" method = "POST">
+    <p><input type = "submit" value = "compare" /></p>
+</form>
+
+</body>

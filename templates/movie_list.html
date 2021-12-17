@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search by Movie</title>
+    <style>
+        .nametitle {
+            color: Black;
+            font-size: 300%;
+        }
+        .block
+        {
+            width: 480px;
+            background-color: antiquewhite;
+            border: solid 3px gray;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        {% for movie in outcome %}
+            <div class="block">
+                <a href="/movie/{{movie.id}}" title="click for detail">
+                    <img src="{{movie.image.url}}" alt="img" width="420" height="594">
+                </a>
+                <p><a href="/movie/{{movie.id}}" title="click for detail"><code class="nametitle"><span>{{movie.name}}</span></code></a></p>
+                <b> <code class="subtitle" style="font-size: 150%; color: chocolate"><span>Rank:</span></code></b><b> {{movie.rank}} </b><br>
+                <b> <code class="subtitle" style="font-size: 150%; color: chocolate"><span>Stars:</span></code></b><b> {{movie.actors[0]}}, {{movie.actors[1]}} </b><br>
+            </div>
+            <br>
+        {% endfor %}
+    </ul>
+    <form action="/to_index/" method = "POST">
+        <p>Back to the main page</p>
+        <p><input type = "submit" value = "OK" /></p>
+    </form>
+</body>
+</html>

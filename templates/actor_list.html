@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search by Actor</title>
+    <style>
+        .nametitle {
+            color: Black;
+            font-size: 300%;
+        }
+        .block
+        {
+            width: 480px;
+            background-color: antiquewhite;
+            border: solid 3px gray;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        {% for actor in outcome %}
+            <div class="block">
+                <a href="/actor/{{actor.id}}" title="click for detail">
+                    <img src="{{actor.image.url}}" alt="img" width="420" height="594">
+                </a>
+                <p><a href="/actor/{actor.id}}" title="click for detail"><code class="nametitle"><span>{{actor.gender}} {{actor.name}}</span></code></a></p>
+                <b> <code class="subtitle" style="font-size: 150%; color: chocolate"><span>Rank:</span></code></b><b> {{actor.rank}} </b><br>
+                <b> <code class="subtitle" style="font-size: 150%; color: chocolate"><span>Masterpiece:</span></code></b><b> {{actor.product}}</b><br>
+            </div>
+            <br>
+        {% endfor %}
+    </ul>
+    <form action="/to_index/" method = "POST">
+        <p>Back to the main page</p>
+        <p><input type = "submit" value = "OK" /></p>
+    </form>
+</body>
+</html>

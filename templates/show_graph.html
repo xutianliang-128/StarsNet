@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show Graph</title>
+    <style>
+        .nametitle {
+            color: Black;
+            font-size: 300%;
+        }
+        .block
+        {
+            width: 700px;
+            background-color: antiquewhite;
+            border: solid 3px gray;
+            text-align: center;
+        }
+        .nametitle {
+            color: Black;
+            font-size: 300%;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="block">
+    <p class="nametitle"> List for movies they worked together: </p>
+    {% set count = namespace(value=0) %}
+    {% for movie in colist %}
+        {% set count.value = count.value + 1 %}
+            <p> {{count.value}}. {{movie}} </p>
+    {% endfor %}
+</div>
+<br>
+
+<img src="data:image/png;base64,{{img_stream}}" alt="img" width="1280" height="960">
+
+<form action="/to_index/" method = "POST">
+    <p>Back to the main page</p>
+    <p><input type = "submit" value = "OK" /></p>
+</form>
+
+</body>

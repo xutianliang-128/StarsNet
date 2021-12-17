@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ratings Graph</title>
+    <style>
+        .nametitle {
+            color: Black;
+            font-size: 300%;
+        }
+        .block
+        {
+            width: 700px;
+            background-color: antiquewhite;
+            border: solid 3px gray;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+<div class="block">
+    <p> The total number of ratings is {{total_num}} </p>
+    <p> The numbers of ratings for 10 to 1 is {{num_list}} </p>
+    <img src="data:image/png;base64,{{img_stream}}" alt="img" width="640" height="480">
+    <p></p>
+    <img src="data:image/png;base64,{{img_stream2}}" alt="img" width="640" height="480">
+    <p></p>
+</div>
+<form action="/to_index/" method = "POST">
+    <p>Back to the main page</p>
+    <p><input type = "submit" value = "OK" /></p>
+</form>
+
+</body>

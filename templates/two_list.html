@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Two lists</title>
+    <style>
+        .nametitle
+        {
+            color: Black;
+            font-size: 300%;
+        }
+        .block_left
+        {
+            width: 350px;
+            float:left;
+            background-color: antiquewhite;
+            border: solid 3px gray;
+            text-align: center;
+        }
+        .block_right
+        {
+            width: 350px;
+            float:right;
+            background-color: antiquewhite;
+            border: solid 3px gray;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p class="nametitle">Choose the stars that you indicate</p>
+    </div>
+    <div style="width:800px; height:500px">
+        <div class="block_left">
+            <p class="nametitle"> List 1: </p>
+            {% set count = namespace(value=0) %}
+            {% for star in outcome1 %}
+                {% set count.value = count.value + 1 %}
+                    <p> {{count.value}}. {{star.name}} </p>
+            {% endfor %}
+        </div>
+
+        <div class="block_right">
+            <p class="nametitle"> List 2: </p>
+            {% set count = namespace(value=0) %}
+            {% for star in outcome2 %}
+                {% set count.value = count.value + 1 %}
+                    <p>{{count.value}}. {{star.name}}</p>
+            {% endfor %}
+        </div>
+    <br>
+    </div>
+    <div>
+    <form action="/handle_actors_list/" method = "POST">
+        <p>Star 1 Index: <input type = "text" name = "index1"/></p>
+        <p>Star 2 Index: <input type = "text" name = "index2"/></p>
+        <p>show the graph you choose</p>
+        <p><input type = "submit" value = "submit" /></p>
+    </form>
+    </div>
+
+
+
+    <form action="/to_index/" method = "POST">
+        <p>Back to the main page</p>
+        <p><input type = "submit" value = "OK" /></p>
+    </form>
+
+
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search by Actor</title>
+    <style>
+        .nametitle {
+            color: Black;
+            font-size: 300%;
+        }
+        .block
+        {
+            width: 480px;
+            background-color: antiquewhite;
+            border: solid 3px gray;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="nametitle"> {{outcome.name}} </div>
+    <br>
+    <div class="block">
+        <img src="{{outcome.image.url}}" alt="img" width="420" height="594">
+
+        <b><code class="subtitle" style="font-size: 150%; color: chocolate"><span>{{outcome.gender}}: {{outcome.name}}</span></code></b><br>
+        <b><code class="subtitle" style="font-size: 150%; color: chocolate"><span>Rank:</span></code></b><b> {{outcome.rank}} </b><br>
+        <b><code class="subtitle" style="font-size: 150%; color: chocolate"><span>Birth Date:</span></code></b><b> {{outcome.birthDate}} </b><br>
+        <b><code class="subtitle" style="font-size: 150%; color: chocolate"><span>Birth Place:</span></code></b><b> {{outcome.birthPlace}} </b><br>
+    </div>
+    <br>
+    <div class="block">
+        <p class="nametitle">Filmography:</p>
+        click for detail
+    </div>
+    <div class="block">
+        {% for id in outcome.out %}
+
+                <p><a href="/movie/{{id[7:-1]}}" title="click for detail"> {{outcome.out[id]}} </a></p>
+
+
+        {% endfor %}
+    </div>
+    <br>
+
+
+    <form action="/to_index/" method = "POST">
+        <p>Back to the main page</p>
+        <p><input type = "submit" value = "OK" /></p>
+    </form>
+
+</body>
