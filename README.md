@@ -13,7 +13,7 @@ This project aims to build a website for users to see the details of a movie inp
 (1) Go to "https://rapidapi.com/apidojo/api/imdb8/pricing" and sign up for the website and subscibe the api to get a key. 
 
 (2) Go to the python file "secret.py" and add the code: 
-'x-rapidapi-key': '<your-key>'
+'x-rapidapi-key': ''your-key>''
 to the header
 
 ### Step 2: Install packages
