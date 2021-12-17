@@ -1,7 +1,7 @@
 # FALL2021 SI 507 Final Project
 
 ## Introduction
-This project aims to build a website for users to see the details of a movie input, details of a star input and learn the filmography that two input stars worked together. The ratings detials are shown in graphs. A bipartite graph are drawn for user to visualize the filmography that two stars worked together. Several basic programming techniques are adopted in the project, which includes accessing data efficiently with caching via scraping and web API, storing and presenting data with graphs, using base64, matplotlib and Flask for data visualization on html page, etc.
+This project aims to build a website for users to see the details of a movie input, details of a star input and learn the filmography that two input stars worked together. The ratings details are shown in graphs. A bipartite graph is drawn for user to visualize the filmography that two stars worked together. Several basic programming techniques are adopted in the project, which includes accessing data efficiently with caching via scraping and web API, storing and presenting data with graphs, using base64, matplotlib and Flask for data visualization on html page, etc.
 
 ## Data Sources
 (1) The details of rating are crawled from the page "https://www.imdb.com/title/" + <movie_id> + "/ratings". The URL direct to the details of ratings page for the indicated movie. The data is crawled and processed with BeautifulSoup and graphs are drawn with the data.
