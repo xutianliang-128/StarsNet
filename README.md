@@ -28,3 +28,6 @@ $ pip install -r requirements.txt --user
 $ python main.py
 ```  
 ### Step 4: Open "http://127.0.0.1:5000/ " in a browser
+
+## Data Structure
+The relation between actors and movies are stored as dictionaries. If functions are called, the program will read the data, combined with the data from API and draw a bipartite graph to indicate the movies two actors worked together.
