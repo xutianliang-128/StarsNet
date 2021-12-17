@@ -31,3 +31,5 @@ $ python main.py
 
 ## Data Structure
 The relation between actors and movies are stored as adjacency lists. If functions are called, the program will read the data, combined with the data from API and draw a bipartite graph to indicate the movies two actors worked together.
+
+The actors and movies are regarded as a bipartite graph. For input actors, with the graph, one can easily find out the movies they worked together.
