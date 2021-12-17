@@ -33,3 +33,6 @@ $ python main.py
 The relation between actors and movies are stored as adjacency lists. If functions are called, the program will read the data, combined with the data from API and draw a bipartite graph to indicate the movies two actors worked together.
 
 The actors and movies are regarded as a bipartite graph. For input actors, with the graph, one can easily find out the movies they worked together.
+
+## Warning
+When the program crash, please check if the actors.json and movies.json files are initialized properly. If not, please initialize the files with "{}".
