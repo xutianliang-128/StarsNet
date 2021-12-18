@@ -495,7 +495,7 @@ def crawling(m_id):
         buffered = BytesIO()
         img.save(buffered, format="PNG")
         img_stream2 = base64.b64encode(buffered.getvalue())
-        img_stream2 = str(img_stream)
+        img_stream2 = str(img_stream2)
 
         return render_template("ratings_detail.html",
                                total_num=total_num,
