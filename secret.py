@@ -7,6 +7,6 @@ actor_filmography_url = "https://imdb8.p.rapidapi.com/actors/get-all-filmography
 
 headers = {
     'x-rapidapi-host': "imdb8.p.rapidapi.com",
-    'x-rapidapi-key': 'ec91c5898cmsh68a6569909bf5f5p14bfc7jsnddaa4b0c71d7'
+    'x-rapidapi-key': #input your key
     }
 
